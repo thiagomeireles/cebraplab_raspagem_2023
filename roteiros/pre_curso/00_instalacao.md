@@ -1,4 +1,4 @@
-# [Cebrap.lab 2021] Captura de dados com R: instalação do R e RStudio
+# [Cebrap.lab 2022] Captura de dados com R: instalação do R e RStudio
 
 
 Antes do curso, é esperado que todos os alunos instalem o R e o RStudio em suas máquinas. 
@@ -13,7 +13,7 @@ No início da primeira aula faremos um tour rápido para entender o que esse IDE
 
 ## Instalação e atualização dos softwares
 
-### Windows 10
+### Windows 10 ou 11
 
 - Para instalar a versão mais recente de R, caso não possua uma instalação, clique [aqui](https://cran.r-project.org/).
 - Para instalar a versão mais recente de R, caso já o possua instalado, execute o código abaixo e siga as instruções:
@@ -32,7 +32,7 @@ updateR()
 
 - Caso seu computador pessoal seja [Mac](https://www.datacamp.com/community/tutorials/installing-R-windows-mac-ubuntu) siga as instruções para instalação somente do R e do RStudio, ignorando os pacotes. Falaremos deles no início da primeira aula.
 
-- Para usuários de [Linux](https://github.com/thiagomeireles/cebraplab_captura_2021/blob/main/tutoriais/pre_curso/00_instalacao_linux.md) foi elaborado um tutorial próprio.
+- Para usuários de [Linux](https://github.com/thiagomeireles/cebraplab_raspagem_2023/blob/main/tutoriais/pre_curso/00_instalacao_linux.md) foi elaborado um tutorial próprio.
 
 
-**Em caso de problemas na realização dos tutoriais de instalação, entrem em contato via [e-mail](mailto:thiagomeireles@usp.br).**
+**Em caso de problemas na realização dos tutoriais de instalação, entrem em contato via [e-mail](mailto:thiago.omeireles@gmail.com).**

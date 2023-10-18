@@ -1,10 +1,11 @@
-# [Cebrap.lab 2022] Captura de dados com R: Tutoriais pré-curso
+# [Cebrap.lab 2023] Raspagem de dados com R: Tutoriais pré-curso
 
 
 ## Objetivos
-Bem-vindxs à primeira edição do Curso de Programação em R do cebrap.lab de 2021. Neste roteiro aprenderemos um pouco sobre a dinâmica do R. Observando as transformações no RStudio, serão apreentadas as principais classes de objetos, como *vetores* e *dataframes*. Além disso, também veremos como funciona a abertura de dados e a utilização de 
 
-Caso não tenha realizado a instação do R e do RStudio, leia e siga o [roteiro de instalação](https://github.com/thiagomeireles/cebraplab_captura_2022/blob/master/roteiros/pre_curso/00_instalacao.md). 
+Bem-vindxs ao Curso de Raspagem de daados com R do cebrap.lab de 2023. Neste roteiro aprenderemos um pouco sobre a dinâmica do R. Observando as transformações no RStudio, serão apreentadas as principais classes de objetos, como *vetores* e *dataframes*. Além disso, também veremos como funciona a abertura de dados e a utilização de operações relacionais.
+
+Caso não tenha realizado a instação do R e do RStudio, leia e siga o [roteiro de instalação](https://github.com/thiagomeireles/cebraplab_raspagem_2023/blob/main/roteiros/pre_curso/00_instalacao.md). 
 
 ## Tutoriais básicos
 
@@ -12,17 +13,17 @@ Para podermos explorar mais ferramentas da linguagem R ao longo do curso, é mui
 
 Divirtam-se! =)
 
-[Tutorial Pré-Curso 0: vídeo sobre o RStudio](https://drive.google.com/file/d/1i_-SrgtYQ_Ig_m80DfzEQw78RHQtkLeY/view?pli=1)
+[Tutorial Pré-Curso 0: vídeo sobre o RStudio](https://drive.google.com/file/d/1vX_MzvdgyWe5PgSPEqKKmr_I5rpUihRJ/view)
 
-[Tutorial Pré-Curso I: data_frames](https://github.com/thiagomeireles/cebraplab_captura_2021/blob/main/tutoriais/pre_curso/Tutorial_01.md) ou na [versão Rmd](https://github.com/thiagomeireles/cebraplab_captura_2021/blob/main/tutoriais/pre_curso/Tutorial_01.Rmd)
+[Tutorial Pré-Curso I: data_frames](https://github.com/thiagomeireles/cebraplab_raspagem_2023/blob/main/tutoriais/pre_curso/Tutorial_01.md) ou na [versão Rmd](https://github.com/thiagomeireles/cebraplab_raspagem_2023/blob/main/tutoriais/pre_curso/Tutorial_01.Rmd)
 
-[Tutorial Pré-Curso II: Entendendo o ambiente e os objetos](https://github.com/thiagomeireles/cebraplab_captura_2021/blob/main/tutoriais/pre_curso/Tutorial_02.md) ou na [versão Rmd](https://github.com/thiagomeireles/cebraplab_captura_2021/blob/main/tutoriais/pre_curso/Tutorial_02.Rmd)
+[Tutorial Pré-Curso II: Entendendo o ambiente e os objetos](https://github.com/thiagomeireles/cebraplab_raspagem_2023/blob/main/tutoriais/pre_curso/Tutorial_02.md) ou na [versão Rmd](https://github.com/thiagomeireles/cebraplab_raspagem_2023/blob/main/tutoriais/pre_curso/Tutorial_02.Rmd)
 
-[Tutorial Pré-Curso III: Abindo dados em R](https://github.com/thiagomeireles/cebraplab_captura_2021/blob/main/tutoriais/pre_curso/Tutorial_03.md) ou na [versão Rmd](https://github.com/thiagomeireles/cebraplab_captura_2021/blob/main/tutoriais/pre_curso/Tutorial_03.Rmd)
+[Tutorial Pré-Curso III: Abindo dados em R](https://github.com/thiagomeireles/cebraplab_raspagem_2023/blob/main/tutoriais/pre_curso/Tutorial_03.md) ou na [versão Rmd](https://github.com/thiagomeireles/cebraplab_raspagem_2023/blob/main/tutoriais/pre_curso/Tutorial_03.Rmd)
 
-[Tutorial Pré-Curso IV: Operadores relacionais](https://github.com/thiagomeireles/cebraplab_captura_2021/blob/main/tutoriais/pre_curso/Tutorial_04.md) ou na [versão Rmd](https://github.com/thiagomeireles/cebraplab_captura_2021/blob/main/tutoriais/pre_curso/Tutorial_04.Rmd)
+[Tutorial Pré-Curso IV: Operadores relacionais](https://github.com/thiagomeireles/cebraplab_raspagem_2023/blob/main/tutoriais/pre_curso/Tutorial_04.md) ou na [versão Rmd](https://github.com/thiagomeireles/cebraplab_raspagem_2023/blob/main/tutoriais/pre_curso/Tutorial_04.Rmd)
 
-[Tutorial Pré-Curso V: Manipulação de dados com *dplyr*](https://github.com/thiagomeireles/cebraplab_captura_2021/blob/main/tutoriais/pre_curso/Tutorial_05.md) ou na [versão Rmd](https://github.com/thiagomeireles/cebraplab_captura_2021/blob/main/tutoriais/pre_curso/Tutorial_05.Rmd)
+[Tutorial Pré-Curso V: Manipulação de dados com *dplyr*](https://github.com/thiagomeireles/cebraplab_raspagem_2023/blob/main/tutoriais/pre_curso/Tutorial_05.md) ou na [versão Rmd](https://github.com/thiagomeireles/cebraplab_raspagem_2023/blob/main/tutoriais/pre_curso/Tutorial_05.Rmd)
 
 Os dois primeiros tutoriais apresentam a linguagem e os objetos que podemos manipular, e são essenciais. Já o terceiro tutorial apresenta algumas formas de abertura de dados externos ao R. Estes são opcionais.
 

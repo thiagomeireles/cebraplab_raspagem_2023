@@ -1,4 +1,4 @@
-# [Cebrap.lab 2022] Captura de dados com R: instalação do R e RStudio
+# [Cebrap.lab 2023] Raspagem de dados com R: instalação do R e RStudio
 
 
 Antes do curso, é esperado que todos os alunos instalem o R e o RStudio em suas máquinas. 

@@ -38,7 +38,7 @@ Este tutorial trata da *dplyr*, gramática mais popular para R nos últimos anos
 
 ```{r}
 library(readr)
-saques_amostra_201701 <- read_delim("https://raw.githubusercontent.com/thiagomeireles/cebraplab_captura_2022/main/dados/saques_amostra_201701.csv",
+saques_amostra_201701 <- read_delim("https://raw.githubusercontent.com/thiagomeireles/cebraplab_raspagem_2023/main/dados/saques_amostra_201701.csv",
                                     delim = ";", escape_double = FALSE, 
                                     col_types = cols(`Valor Parcela` = col_character()))
 
@@ -128,7 +128,7 @@ Use o comando _rm_ para deletar a base de dados e abra novamente. Vejamos agora 
 ```{r, include=FALSE}
 rm(saques_amostra_201701, saques_amostra2)
 
-saques_amostra_201701 <- read_delim("https://raw.githubusercontent.com/thiagomeireles/cebraplab_captura_2022/main/dados/saques_amostra_201701.csv",
+saques_amostra_201701 <- read_delim("https://raw.githubusercontent.com/thiagomeireles/cebraplab_raspagem_2023/main/dados/saques_amostra_201701.csv",
                                     delim = ";", escape_double = FALSE, 
                                     col_types = cols(`Valor Parcela` = col_character()))
 ```
@@ -321,18 +321,18 @@ Vamos retornar ao exemplo do início do tutorial, começando com a produção de
 ```{r}
 contagem_uf <- saques_amostra_201701 %>% 
   group_by(uf) %>% 
-  summarise(contagem = n()) %>% 
+  reframe(contagem = n()) %>% 
   ungroup()
 ```
 
-Veja que temos 3 funções no nosso *pipe*: *group\_by*, *summarise* e *ungroup*. Elas tem significado literal. Na primeira, inserimos as variáveis pelas quais agruparemos o banco de dados (podemos usar mais de uma). Na segunda, as operações de "sumário"/"resumo", ou seja, de condensação - o que faremos com o banco de dados e demais variáveis. Aqui apenas contamos quantas linhas pertencem a cada UF, que é a variável de grupo, a partir da função *n()*. Por fim, a função *ungroup* "desagrupa" os dados. Ela é importante para evitar problemas em futuras manipulações, uma vez que o R bloqueia algumas delas para dados agrupados.
+Veja que temos 3 funções no nosso *pipe*: *group\_by*, *reframe* e *ungroup*. Elas tem significado literal. Na primeira, inserimos as variáveis pelas quais agruparemos o banco de dados (podemos usar mais de uma). Na segunda, as operações de "sumário"/"resumo", ou seja, de condensação - o que faremos com o banco de dados e demais variáveis. Aqui apenas contamos quantas linhas pertencem a cada UF, que é a variável de grupo, a partir da função *n()*. Por fim, a função *ungroup* "desagrupa" os dados. Ela é importante para evitar problemas em futuras manipulações, uma vez que o R bloqueia algumas delas para dados agrupados.
 
-Vamos tornar isso um pouco mais interessante. Além da contagem, vamos obter a soma, a média, a mediana, o desvio padrão, os valores mínimos e máximos dos benefícios no mesmo resultado. Para isso, basta inserir novas operações na função *summarise* separando por vírgulas.
+Vamos tornar isso um pouco mais interessante. Além da contagem, vamos obter a soma, a média, a mediana, o desvio padrão, os valores mínimos e máximos dos benefícios no mesmo resultado. Para isso, basta inserir novas operações na função *reframe* separando por vírgulas.
 
 ```{r}
 valores_uf <- saques_amostra_201701 %>% 
   group_by(uf) %>% 
-  summarise(contagem = n(),
+  reframe(contagem = n(),
             soma     = sum(valor_num),
             media    = mean(valor_num),
             mediana  = median(valor_num),
@@ -344,7 +344,7 @@ valores_uf <- saques_amostra_201701 %>%
 
 Use _View_ para observar o resultado.
 
-A sessão _Useful Summary Functions_ do livro _R for Data Science_ traz uma relação mais completa de funçoes que podem ser usandas com _summarise_. O ["cheatsheet" da RStudio](https://github.com/rstudio/cheatsheets/raw/master/source/pdfs/data-transformation-cheatsheet.pdf) oferece uma lista para uso rápido.
+A sessão _Useful Summary Functions_ do livro _R for Data Science_ traz uma relação mais completa de funçoes que podem ser usandas com _reframe_. O ["cheatsheet" da RStudio](https://github.com/rstudio/cheatsheets/raw/master/source/pdfs/data-transformation-cheatsheet.pdf) oferece uma lista para uso rápido.
 
 ### Exercício para casa
 
@@ -357,7 +357,7 @@ Lembra que podemos agrupar por mais de uma variável? Vamos aplicar isso agrupan
 ```{r}
 contagem_uf_mes <- saques_amostra_201701 %>% 
   group_by(uf, mes) %>% 
-  summarise(contagem = n()) %>% 
+  reframe(contagem = n()) %>% 
   ungroup()
 ```
 
@@ -371,7 +371,7 @@ Finalmente, podemos utilizar múltiplas variáveis de grupo em conjunto e també
 ```{r}
 valores_uf_mes <- saques_amostra_201701 %>% 
   group_by(uf, mes) %>% 
-  summarise(contagem = n(),
+  reframe(contagem = n(),
             soma     = sum(valor_num),
             media    = mean(valor_num),
             desvio   = sd(valor_num)) %>% 
@@ -380,7 +380,7 @@ valores_uf_mes <- saques_amostra_201701 %>%
 
 ## Novo _data frame_ ou tabela para análise?
 
-As funções *group_\by* e *summarise* tem dois propósitos em seu uso. O primeiro é a produção de uma tabela para análise (ou para geração de gráficos), como fizemos acima. A outra é a geração de um novo *data\_frame*. O uso depende do tamanho da redução que queremos no banco de dados.
+As funções *group_\by* e *reframe* tem dois propósitos em seu uso. O primeiro é a produção de uma tabela para análise (ou para geração de gráficos), como fizemos acima. A outra é a geração de um novo *data\_frame*. O uso depende do tamanho da redução que queremos no banco de dados.
 
 Por exemplo, podemos pensar em um banco que agrege as informações por município, o que geraria um novo banco com pouco mais de 5500 observações/linhas a partir do banco completo. Poderíamos utilizar esses dados para inserir nos dados originais como colunas (você pode aplicar isso de forma direta usando a função *mutate*). Mas ainda não aprendemos a relacionar dois ou mais *data\_frames* - faremos no Tutorial 3.
 
@@ -389,7 +389,7 @@ Por agora, vamos observar como seria a base de dados utilizando os municípios c
 ```{r}
 saques_amostra_munic <- saques_amostra_201701 %>% 
   group_by(munic) %>% 
-  summarise(contagem = n(),
+  reframe(contagem = n(),
             soma     = sum(valor_num),
             media    = mean(valor_num)) %>% 
   ungroup()
@@ -413,7 +413,7 @@ Poderíamos ter feito diferente e usado o comanto *arrange* diretamente ao gerar
 ```{r}
 valores_uf <- saques_amostra_201701 %>% 
   group_by(uf) %>% 
-  summarise(contagem = n(),
+  reframe(contagem = n(),
             soma     = sum(valor_num),
             media    = mean(valor_num),
             mediana  = median(valor_num),

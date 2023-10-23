@@ -1,0 +1,12 @@
+---
+title: "Tutorial 1: Introdução ao *rvest* e revisão"
+author: "Thiago Meireles"
+date: "`r format(Sys.time(), '%d/%m/%y')`"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message=FALSE, results='hide')
+```
+
+## Pacotes no *rvest*

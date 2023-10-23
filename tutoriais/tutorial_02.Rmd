@@ -1,0 +1,12 @@
+---
+title: "Tutorial 2: *html* com o sistema de busca da Folha de São Paulo"
+author: "Thiago Meireles"
+date: "`r format(Sys.time(), '%d/%m/%y')`"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message=FALSE, results='hide')
+```
+
+## Apresentação do problema

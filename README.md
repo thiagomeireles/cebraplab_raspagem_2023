@@ -36,13 +36,13 @@ No entanto, ressalto a importância das atividades de terça e quinta-feira.
 
 A participação no curso requer uma exposição prévia à linguagem R e ao ambiente de tabalho do RStudio.
 
-Caso não tenha nenhum contato com a linguagem, é mandatória a realização de um [roteiro de tutoriais de preparação](https://github.com/thiagomeireles/cebraplab_captura_2022/blob/main/roteiros/pre_curso/01_basico.md) antes do início das aulas. 
+Caso não tenha nenhum contato com a linguagem, é mandatória a realização de um [roteiro de tutoriais de preparação](https://github.com/thiagomeireles/cebraplab_raspagem_2023/blob/main/roteiros/pre_curso/01_basico.md) antes do início das aulas. 
 
 Ainda que tenha conhecimento básico das estruturas da linguagem, é fortemente recomendado que tambem o façam.
 
 O tempo estimado para o tutorial é de *aproximadamente 4 horas*.
 
-Além disso, um [Tutorial de manipulação de dados com dplyr](https://github.com/thiagomeireles/cebraplab_captura_2022/blob/main/tutoriais/pre_curso/Tutorial_05.md) é mandatório e tem tempo estimado para realização em *aproximadamente 2 horas*.
+Além disso, um [Tutorial de manipulação de dados com dplyr](https://github.com/thiagomeireles/cebraplab_raspagem_2023/blob/main/tutoriais/pre_curso/Tutorial_05.md) é mandatório e tem tempo estimado para realização em *aproximadamente 2 horas*.
 
 ### Equipamento
 
@@ -50,7 +50,7 @@ Como a boa parte do curso é baseada em tutoriais em que vocês aprenderão "col
 
 ### Softwares
 
-Foi preparado um [Roteiro de instalação](https://github.com/thiagomeireles/cebraplab_captura_2022/blob/main/roteiros/pre_curso/00_instalacao.md) onde estão as instruções para a instalação dos softwares necessários.
+Foi preparado um [Roteiro de instalação](https://github.com/thiagomeireles/cebraplab_raspagem_2023/blob/main/roteiros/pre_curso/00_instalacao.md) onde estão as instruções para a instalação dos softwares necessários.
 
 ## Objetivos
 

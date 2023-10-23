@@ -24,7 +24,7 @@ Hoje é a aula mais importante do curso, na qual trataremos de uma situação ma
 
 
 ## Links
-
+ 
 [Link para o Zoom](https://us06web.zoom.us/j/86080101037?pwd=8aw2pN5lG0TYvgvaT7eQGxAYsKcsA1.1)
 
 [Lista de presença](https://docs.google.com/spreadsheets/d/1bSBtkgPy66xWR9cmXanpTkj9bnPyynn0KcPi5tSiYaw/edit?exids=71471476,71471470&pli=1#gid=764662017)

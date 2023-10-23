@@ -16,7 +16,7 @@ Hoje é a aula mais importante do curso, na qual trataremos de uma situação ma
 
 2- Rever muito rapidamente o ambiente de programação de R e o software RStudio;
 
-3- A primeira experiência de raspagem de dados no curso será com o [Tutorial 1]((https://github.com/thiagomeireles/cebraplab_raspagem_2023/blob/main/tutoriais/tutorial_01.md): Páginas com tabelas. Neste tutorial, veremos rapidamente como extrair dados que estão em *tabelas* nos sites e alguns aspectos imporantes para o curso. A versão *Rmd* está disponível [aqui]((https://github.com/thiagomeireles/cebraplab_raspagem_2023/blob/main/tutoriais/tutorial_01.Rmd).
+3- A primeira experiência de raspagem de dados no curso será com o [Tutorial 1](https://github.com/thiagomeireles/cebraplab_raspagem_2023/blob/main/tutoriais/tutorial_01.md): Páginas com tabelas. Neste tutorial, veremos rapidamente como extrair dados que estão em *tabelas* nos sites e alguns aspectos imporantes para o curso. A versão *Rmd* está disponível [aqui](https://github.com/thiagomeireles/cebraplab_raspagem_2023/blob/main/tutoriais/tutorial_01.Rmd).
 
 4- A seguir, faça os tutoriais, na sequência: 
 

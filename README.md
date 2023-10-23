@@ -78,9 +78,9 @@ Todas os dias de curso terão roteiros a cumprir. Pouco antes de cada encontro, 
 
 Os links para os tutoriais estarão abaixo minutos antes de cada aula.
 
-[Tutorial 1](https://github.com/thiagomeireles/cebraplab_raspagem_2023/blob/main/tutoriais/tutorial_01.md): . Versão [Rmd](https://github.com/thiagomeireles/cebraplab_raspagem_2023/blob/main/tutoriais/tutorial_01.Rmd)
+[Tutorial 1](https://github.com/thiagomeireles/cebraplab_raspagem_2023/blob/main/tutoriais/tutorial_01.md): Introdução ao rvest e revisão. Versão [Rmd](https://github.com/thiagomeireles/cebraplab_raspagem_2023/blob/main/tutoriais/tutorial_01.Rmd)
 
-[Tutorial 2](https://github.com/thiagomeireles/cebraplab_raspagem_2023/blob/main/tutoriais/tutorial_02.md): . Versão [Rmd](https://github.com/thiagomeireles/cebraplab_raspagem_2023/blob/main/tutoriais/tutorial_02.Rmd)
+[Tutorial 2](https://github.com/thiagomeireles/cebraplab_raspagem_2023/blob/main/tutoriais/tutorial_02.md): Tutorial 2: html com o sistema de busca da Folha de São Paulo. Versão [Rmd](https://github.com/thiagomeireles/cebraplab_raspagem_2023/blob/main/tutoriais/tutorial_02.Rmd)
 
 ## Referências
 

@@ -64,7 +64,7 @@ Os participantes, ao fim do curso, serão capazes de:
 
 Todas os dias de curso terão roteiros a cumprir. Pouco antes de cada encontro, as linhas abaixo serão preenchidas com links com as descrições do que esperamos em cada dia de curso e como o faremos.
 
-[Dia 1](https://github.com/thiagomeireles/cebraplab_raspagem_2023/blob/main/roteiros/dia_1.Rmd) - O básico da raspagem de dados
+[Dia 1](https://github.com/thiagomeireles/cebraplab_raspagem_2023/blob/main/roteiros/dia_1.md) - O básico da raspagem de dados
 
 [Dia 2]() - 
 

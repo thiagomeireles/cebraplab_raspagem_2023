@@ -64,13 +64,23 @@ Os participantes, ao fim do curso, serão capazes de:
 
 Todas os dias de curso terão roteiros a cumprir. Pouco antes de cada encontro, as linhas abaixo serão preenchidas com links com as descrições do que esperamos em cada dia de curso e como o faremos.
 
-[Dia 1]() - 
+[Dia 1](https://github.com/thiagomeireles/cebraplab_raspagem_2023/blob/main/roteiros/dia_1.Rmd) - O básico da raspagem de dados
+
+[Dia 2]() - 
+
+[Dia 3]() - 
+
+[Dia 4]() - 
+
+[Dia 5]() - 
 
 ### Tutoriais
 
-Os links para os tutoriais estarão abaixo antes de cada aula.
+Os links para os tutoriais estarão abaixo minutos antes de cada aula.
 
-[Tutorial 1](): . Versão [Rmd]()
+[Tutorial 1](https://github.com/thiagomeireles/cebraplab_raspagem_2023/blob/main/tutoriais/tutorial_01.md): . Versão [Rmd](https://github.com/thiagomeireles/cebraplab_raspagem_2023/blob/main/tutoriais/tutorial_01.Rmd)
+
+[Tutorial 2](https://github.com/thiagomeireles/cebraplab_raspagem_2023/blob/main/tutoriais/tutorial_02.md): . Versão [Rmd](https://github.com/thiagomeireles/cebraplab_raspagem_2023/blob/main/tutoriais/tutorial_02.Rmd)
 
 ## Referências
 

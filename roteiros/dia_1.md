@@ -20,7 +20,7 @@ Hoje é a aula mais importante do curso, na qual trataremos de uma situação ma
 
 4- A seguir, faça os tutoriais, na sequência: 
 
-- [Tutorial 2](https://github.com/thiagomeireles/cebraplab_raspagem_2023/blob/main/tutoriais/tutorial_02.md): Realizar a extração de qualquer conteúdo de uma página utilizando os "caminhos" dos elementos da página no código html. Aqui para  versão [Rmd]((https://github.com/thiagomeireles/cebraplab_raspagem_2023/blob/main/tutoriais/tutorial_02.Rmd);
+- [Tutorial 2](https://github.com/thiagomeireles/cebraplab_raspagem_2023/blob/main/tutoriais/tutorial_02.md): Realizar a extração de qualquer conteúdo de uma página utilizando os "caminhos" dos elementos da página no código html. Aqui para  versão [Rmd](https://github.com/thiagomeireles/cebraplab_raspagem_2023/blob/main/tutoriais/tutorial_02.Rmd);
 
 
 ## Links

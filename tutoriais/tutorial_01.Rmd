@@ -46,7 +46,7 @@ A expressão _::_ é importante para duas aplicações diferentes. A primeira é
 
 ## Capturando o conteúdo de uma página com *rvest*
 
-Para acessar o conteúdo de uma página, precisamos de funções que façam algo semelhante a um navegador de internet, ou seja, que se comuniquem com o servidor da página e receba o seu conteúdo. Para capturar uma página, ou melhor, o código HTML no qual a página está escrita, utilizamos a função *read_html*, do pacote *rvest*. Vamos usar um exemplo com a Wikipedia.
+Para acessar o conteúdo de uma página, precisamos de funções que façam algo semelhante a um navegador de internet, ou seja, que se comuniquem com o servidor da página e receba o seu conteúdo. Para capturar uma página, ou melhor, o código HTMBoa nL no qual a página está escrita, utilizamos a função *read_html*, do pacote *rvest*. Vamos usar um exemplo com a Wikipedia.
 
 ```{r}
 url <- "https://pt.wikipedia.org/wiki/Lista_de_pa%C3%ADses_e_territ%C3%B3rios_por_%C3%A1rea"
@@ -66,7 +66,7 @@ class(tabelas_wiki)
 str(tabelas_wiki)
 ```
 
-Lembre-se que utilizando as funções *class* e *str* conseguimos identificar o tipo de objeto gerado e como ele foi estruturado. Geramos em uma lista com 7 tabelas. Voltaremos a elas mais tarde.
+Lembre-se que utilizando as funções *class* e *str* conseguimos identificar o tipo de objeto gerado e como ele foi estruturado. Geramos em uma lista com 8 tabelas. Voltaremos a elas mais tarde.
 
 ## Atividade inicial - Pesquisa no site da Folha de São Paulo
 

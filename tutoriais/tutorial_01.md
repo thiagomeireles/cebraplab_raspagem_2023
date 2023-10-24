@@ -57,7 +57,7 @@ class(tabelas_wiki)
 str(tabelas_wiki)
 ```
 
-Lembre-se que utilizando as funções *class* e *str* conseguimos identificar o tipo de objeto gerado e como ele foi estruturado. Geramos em uma lista com 7 tabelas. Voltaremos a elas mais tarde.
+Lembre-se que utilizando as funções *class* e *str* conseguimos identificar o tipo de objeto gerado e como ele foi estruturado. Geramos em uma lista com 8 tabelas. Voltaremos a elas mais tarde.
 
 ## Atividade inicial - Pesquisa no site da Folha de São Paulo
 

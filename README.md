@@ -82,9 +82,9 @@ Os links para os tutoriais estarão abaixo minutos antes de cada aula.
 
 [Tutorial 2](https://github.com/thiagomeireles/cebraplab_raspagem_2023/blob/main/tutoriais/tutorial_02.md): html com o sistema de busca da Folha de São Paulo. Versão [Rmd](https://github.com/thiagomeireles/cebraplab_raspagem_2023/blob/main/tutoriais/tutorial_02.Rmd)
 
-[Tutorial 3](https://github.com/thiagomeireles/cebraplab_raspagem_2023/blob/main/tutoriais/Tutorial_03.md): Automatizando a raspagem de notícias. [Versão Rmd](https://github.com/thiagomeireles/cebraplab_raspagem_2023/blob/main/tutoriais/Tutorial_03.Rmd)
+[Tutorial 3](https://github.com/thiagomeireles/cebraplab_raspagem_2023/blob/main/tutoriais/tutorial_03.md): Automatizando a raspagem de notícias. [Versão Rmd](https://github.com/thiagomeireles/cebraplab_raspagem_2023/blob/main/tutoriais/tutorial_03.Rmd)
 
-[Tutorial 4](https://github.com/thiagomeireles/cebraplab_raspagem_2023/blob/main/tutoriais/Tutorial_04.md): Manipulação de texto no R: pacote _stringr_. [Versão Rmd](https://github.com/thiagomeireles/cebraplab_raspagem_2023/blob/main/tutoriais/Tutorial_04.Rmd)
+[Tutorial 4](https://github.com/thiagomeireles/cebraplab_raspagem_2023/blob/main/tutoriais/tutorial_04.md): Manipulação de texto no R: pacote _stringr_. [Versão Rmd](https://github.com/thiagomeireles/cebraplab_raspagem_2023/blob/main/tutoriais/tutorial_04.md)
 
 ## Referências
 

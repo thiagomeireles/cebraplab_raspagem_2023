@@ -68,7 +68,7 @@ Todas os dias de curso terão roteiros a cumprir. Pouco antes de cada encontro, 
 
 [Dia 2](https://github.com/thiagomeireles/cebraplab_raspagem_2023/blob/main/roteiros/dia_2.md) - Aplicação da raspagem de dados em pesquisas
 
-[Dia 3]() - 
+[Dia 3](https://github.com/thiagomeireles/cebraplab_raspagem_2023/blob/main/roteiros/dia_2.md) - Automatizando a raspagem de dados e manipulando o conteúdo
 
 [Dia 4]() - 
 
@@ -80,7 +80,11 @@ Os links para os tutoriais estarão abaixo minutos antes de cada aula.
 
 [Tutorial 1](https://github.com/thiagomeireles/cebraplab_raspagem_2023/blob/main/tutoriais/tutorial_01.md): Introdução ao rvest e revisão. Versão [Rmd](https://github.com/thiagomeireles/cebraplab_raspagem_2023/blob/main/tutoriais/tutorial_01.Rmd)
 
-[Tutorial 2](https://github.com/thiagomeireles/cebraplab_raspagem_2023/blob/main/tutoriais/tutorial_02.md): Tutorial 2: html com o sistema de busca da Folha de São Paulo. Versão [Rmd](https://github.com/thiagomeireles/cebraplab_raspagem_2023/blob/main/tutoriais/tutorial_02.Rmd)
+[Tutorial 2](https://github.com/thiagomeireles/cebraplab_raspagem_2023/blob/main/tutoriais/tutorial_02.md): html com o sistema de busca da Folha de São Paulo. Versão [Rmd](https://github.com/thiagomeireles/cebraplab_raspagem_2023/blob/main/tutoriais/tutorial_02.Rmd)
+
+[Tutorial 3](https://github.com/thiagomeireles/cebraplab_raspagem_2023/blob/main/tutoriais/Tutorial_03.md): Automatizando a raspagem de notícias. [Versão Rmd](https://github.com/thiagomeireles/cebraplab_raspagem_2023/blob/main/tutoriais/Tutorial_03.Rmd)
+
+[Tutorial 4](https://github.com/thiagomeireles/cebraplab_raspagem_2023/blob/main/tutoriais/Tutorial_04.md): Manipulação de texto no R: pacote _stringr_. [Versão Rmd](https://github.com/thiagomeireles/cebraplab_raspagem_2023/blob/main/tutoriais/Tutorial_04.Rmd)
 
 ## Referências
 

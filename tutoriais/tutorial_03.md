@@ -1,4 +1,4 @@
-# Tutorial 3: Raspando notícias da Folha
+# Tutorial 3: Automatizando a raspagem de notícias
 
 Nas atividades anteriores utilizamos as ferramentas básicas de captura de dados disponíveis na biblioteca *rvest*. Primeiro, vimos como capturar várias tábelas em uma página em formato HTML de uma só vez. Depois, aprendemos como um documento XML está estruturado e que podemos a extrair com precisão os conteúdos de tags e os valores dos atributos das tags de páginas escritas em HTML.
 
@@ -260,7 +260,7 @@ texto <- html_text(node_texto) %>%
 texto <- texto[texto!=""]
 texto <- texto[texto!="Mais"]
 texto <- paste(texto, collapse = " ")
-texto <- str_squish(texto, "Recurso exclusivo para assinantes")[[1]][1]
+texto <- str_split(texto, "Recurso exclusivo para assinantes")[[1]][1]
 texto <- str_squish(texto)
 ```
 

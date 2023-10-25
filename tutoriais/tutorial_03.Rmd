@@ -1,5 +1,5 @@
 ---
-title: "Tutorial 3: Raspando notícias da Folha"
+title: "Tutorial 3: Automatizando a raspagem de notícias"
 author: "Thiago Meireles"
 date: "`r format(Sys.time(), '%d/%m/%y')`"
 output: pdf_document
@@ -269,7 +269,7 @@ texto <- html_text(node_texto) %>%
 texto <- texto[texto!=""]
 texto <- texto[texto!="Mais"]
 texto <- paste(texto, collapse = " ")
-texto <- str_squish(texto, "Recurso exclusivo para assinantes")[[1]][1]
+texto <- str_split(texto, "Recurso exclusivo para assinantes")[[1]][1]
 texto <- str_squish(texto)
 ```
 

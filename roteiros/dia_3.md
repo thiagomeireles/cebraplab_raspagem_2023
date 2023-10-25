@@ -10,9 +10,9 @@ De forma geral, o principal objetivo hoje é a aplicação de *loops* nos links 
 
 1- Construção de loops e captura de conteúdo das páginas acompanhando o professor.
 
-2- Nossa primeira atividade terá o [Tutorial 3](https://github.com/thiagomeireles/cebraplab_raspagem_2023/blob/main/tutoriais/Tutorial_03.md) sobre como extrair informações de uma sequência páginas (ex. portal de notícias). Aqui para versão [Rmd](https://github.com/thiagomeireles/cebraplab_raspagem_2023/blob/main/tutoriais/Tutorial_03.Rmd)
+2- Nossa primeira atividade terá o [Tutorial 3](https://github.com/thiagomeireles/cebraplab_raspagem_2023/blob/main/tutoriais/tutorial_03.md) sobre como extrair informações de uma sequência páginas (ex. portal de notícias). Aqui para versão [Rmd](https://github.com/thiagomeireles/cebraplab_raspagem_2023/blob/main/tutoriais/tutorial_03.Rmd)
 
-3- O [Tutorial 4](https://github.com/thiagomeireles/cebraplab_raspagem_2023/blob/main/tutoriais/Tutorial_04.md) traz o pacote *stringr*. Ele é bastente útilizado para "limpeza" e manipulação de textos. Já vimos algumas de suas funções, mas aqui temos uma visão um pouco mais ampliada.
+3- O [Tutorial 4](https://github.com/thiagomeireles/cebraplab_raspagem_2023/blob/main/tutoriais/tutorial_04.md) traz o pacote *stringr*. Ele é bastente útilizado para "limpeza" e manipulação de textos. Já vimos algumas de suas funções, mas aqui temos uma visão um pouco mais ampliada.  Aqui para versão [Rmd](https://github.com/thiagomeireles/cebraplab_raspagem_2023/blob/main/tutoriais/tutorial_04.Rmd)
 
 
 ## Links

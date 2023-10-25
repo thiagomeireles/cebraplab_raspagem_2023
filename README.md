@@ -84,7 +84,7 @@ Os links para os tutoriais estarão abaixo minutos antes de cada aula.
 
 [Tutorial 3](https://github.com/thiagomeireles/cebraplab_raspagem_2023/blob/main/tutoriais/tutorial_03.md): Automatizando a raspagem de notícias. [Versão Rmd](https://github.com/thiagomeireles/cebraplab_raspagem_2023/blob/main/tutoriais/tutorial_03.Rmd)
 
-[Tutorial 4](https://github.com/thiagomeireles/cebraplab_raspagem_2023/blob/main/tutoriais/tutorial_04.md): Manipulação de texto no R: pacote _stringr_. [Versão Rmd](https://github.com/thiagomeireles/cebraplab_raspagem_2023/blob/main/tutoriais/tutorial_04.md)
+[Tutorial 4](https://github.com/thiagomeireles/cebraplab_raspagem_2023/blob/main/tutoriais/tutorial_04.md): Manipulação de texto no R: pacote _stringr_. [Versão Rmd](https://github.com/thiagomeireles/cebraplab_raspagem_2023/blob/main/tutoriais/tutorial_04.Rmd)
 
 ## Referências
 

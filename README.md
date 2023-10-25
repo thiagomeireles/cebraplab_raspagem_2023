@@ -68,7 +68,7 @@ Todas os dias de curso terão roteiros a cumprir. Pouco antes de cada encontro, 
 
 [Dia 2](https://github.com/thiagomeireles/cebraplab_raspagem_2023/blob/main/roteiros/dia_2.md) - Aplicação da raspagem de dados em pesquisas
 
-[Dia 3](https://github.com/thiagomeireles/cebraplab_raspagem_2023/blob/main/roteiros/dia_2.md) - Automatizando a raspagem de dados e manipulando o conteúdo
+[Dia 3](https://github.com/thiagomeireles/cebraplab_raspagem_2023/blob/main/roteiros/dia_3.md) - Automatizando a raspagem de dados e manipulando o conteúdo
 
 [Dia 4]() - 
 

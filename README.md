@@ -70,7 +70,7 @@ Todas os dias de curso terão roteiros a cumprir. Pouco antes de cada encontro, 
 
 [Dia 3](https://github.com/thiagomeireles/cebraplab_raspagem_2023/blob/main/roteiros/dia_3.md) - Automatizando a raspagem de dados e manipulando o conteúdo
 
-[Dia 4]() - 
+[Dia 4](https://github.com/thiagomeireles/cebraplab_raspagem_2023/blob/main/roteiros/dia_4.md) - Desafios de raspagem de dados com automatização da raspagem em *html* e novos desafios
 
 [Dia 5]() - 
 
@@ -85,6 +85,11 @@ Os links para os tutoriais estarão abaixo minutos antes de cada aula.
 [Tutorial 3](https://github.com/thiagomeireles/cebraplab_raspagem_2023/blob/main/tutoriais/tutorial_03.md): Automatizando a raspagem de notícias. [Versão Rmd](https://github.com/thiagomeireles/cebraplab_raspagem_2023/blob/main/tutoriais/tutorial_03.Rmd)
 
 [Tutorial 4](https://github.com/thiagomeireles/cebraplab_raspagem_2023/blob/main/tutoriais/tutorial_04.md): Manipulação de texto no R: pacote _stringr_. [Versão Rmd](https://github.com/thiagomeireles/cebraplab_raspagem_2023/blob/main/tutoriais/tutorial_04.Rmd)
+
+[Tutorial 5](https://github.com/thiagomeireles/cebraplab_raspagem_2023/blob/main/tutoriais/tutorial_05.md): Datafolha e download de conteúdo. [Versão Rmd](https://github.com/thiagomeireles/cebraplab_raspagem_2023/blob/main/tutoriais/tutorial_05.Rmd)
+
+[Tutorial 6](https://github.com/thiagomeireles/cebraplab_raspagem_2023/blob/main/tutoriais/tutorial_06.md): Introdução RSelenium. [Versão Rmd](https://github.com/thiagomeireles/cebraplab_raspagem_2023/blob/main/tutoriais/tutorial_06.Rmd)
+
 
 ## Referências
 

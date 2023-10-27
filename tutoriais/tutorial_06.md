@@ -74,8 +74,8 @@ Na sequência, vinculamos um *client* ao servidor para que possamos [abrir e faz
 ```{r}
 pacman::p_load(RSelenium)
 
-rD <- rsDriver(browser = c("firefox"),
-               port = 4567L)
+rD <- rsDriver(browser = c("firefox"), port = 4567L, verbose=F, chromever = NULL)
+
 cliente <- rD$client
 ```
 

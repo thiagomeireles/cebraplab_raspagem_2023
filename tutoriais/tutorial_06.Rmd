@@ -8,6 +8,7 @@ output: html_document
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+
 ## Apresentação do problema
 
 Aprendemos a coletar dados de páginas de busca a partir de atributos e conteúdos das "tags" nos "xpaths" e como automatizar a captura de todas as páginas do resultado. Nossos pŕoximos passos estão relacionados com os mesmos procedimentos para o site do Diário Oficial da União (DOU). Veremos que algumas coisas podem se alterar nos próximos tutoriais, uma vez que lidamos com páginas estáticas e nem sempre é a realidade que encontramos - muitas vezes elas são dinâmicas e requerem outras ferramentas.
@@ -82,8 +83,8 @@ Na sequência, vinculamos um *client* ao servidor para que possamos [abrir e faz
 ```{r}
 pacman::p_load(RSelenium)
 
-rD <- rsDriver(browser = c("firefox"),
-               port = 4567L)
+rD <- rsDriver(browser = c("firefox"), port = 4567L, verbose=F, chromever = NULL)
+
 cliente <- rD$client
 ```
 

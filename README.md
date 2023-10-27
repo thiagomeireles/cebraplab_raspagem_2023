@@ -72,7 +72,8 @@ Todas os dias de curso terão roteiros a cumprir. Pouco antes de cada encontro, 
 
 [Dia 4](https://github.com/thiagomeireles/cebraplab_raspagem_2023/blob/main/roteiros/dia_4.md) - Desafios de raspagem de dados com automatização da raspagem em *html* e novos desafios
 
-[Dia 5]() - 
+[Dia 5](https://github.com/thiagomeireles/cebraplab_raspagem_2023/blob/main/roteiros/dia_5.md) - *RSelenium* e formulários
+
 
 ### Tutoriais
 
@@ -89,6 +90,10 @@ Os links para os tutoriais estarão abaixo minutos antes de cada aula.
 [Tutorial 5](https://github.com/thiagomeireles/cebraplab_raspagem_2023/blob/main/tutoriais/tutorial_05.md): Datafolha e download de conteúdo. [Versão Rmd](https://github.com/thiagomeireles/cebraplab_raspagem_2023/blob/main/tutoriais/tutorial_05.Rmd)
 
 [Tutorial 6](https://github.com/thiagomeireles/cebraplab_raspagem_2023/blob/main/tutoriais/tutorial_06.md): Introdução RSelenium. [Versão Rmd](https://github.com/thiagomeireles/cebraplab_raspagem_2023/blob/main/tutoriais/tutorial_06.Rmd)
+
+[Tutorial 7](https://github.com/thiagomeireles/cebraplab_raspagem_2023/blob/main/tutoriais/tutorial_07.md): Capturando as publicações do DOU. [Versão Rmd](https://github.com/thiagomeireles/cebraplab_raspagem_2023/blob/main/tutoriais/tutorial_07.Rmd)
+
+[Tutorial 8](https://github.com/thiagomeireles/cebraplab_raspagem_2023/blob/main/tutoriais/tutorial_08.md): . [Versão Rmd](https://github.com/thiagomeireles/cebraplab_raspagem_2023/blob/main/tutoriais/tutorial_08.Rmd)
 
 
 ## Referências

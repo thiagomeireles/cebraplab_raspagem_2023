@@ -93,7 +93,7 @@ Os links para os tutoriais estarão abaixo minutos antes de cada aula.
 
 [Tutorial 7](https://github.com/thiagomeireles/cebraplab_raspagem_2023/blob/main/tutoriais/tutorial_07.md): Capturando as publicações do DOU. [Versão Rmd](https://github.com/thiagomeireles/cebraplab_raspagem_2023/blob/main/tutoriais/tutorial_07.Rmd)
 
-[Tutorial 8](https://github.com/thiagomeireles/cebraplab_raspagem_2023/blob/main/tutoriais/tutorial_08.md): . [Versão Rmd](https://github.com/thiagomeireles/cebraplab_raspagem_2023/blob/main/tutoriais/tutorial_08.Rmd)
+[Tutorial 8](https://github.com/thiagomeireles/cebraplab_raspagem_2023/blob/main/tutoriais/tutorial_08.md): Formulários na web. [Versão Rmd](https://github.com/thiagomeireles/cebraplab_raspagem_2023/blob/main/tutoriais/tutorial_08.Rmd)
 
 
 ## Referências

@@ -1,5 +1,6 @@
 # Tutorial 7: Capturando as publicações do DOU
 
+## Abrindo o RSelenium e acessando a busca do DOU
 
 Como vimos no Tutorial 7, para acessar sites dinâmicos utilizaremos o *RSelenium*. Antes de abrir nosso navegador remoto, vamos carregar os pacotes que utilizaremos no Tutorial:
 
@@ -169,6 +170,9 @@ View(tabela)
 Vamos agora aplicar um loop e montar essa tabela com todas as publicações da nossa primeira página de resultados. Primeiro criamos um *data_frame* vazio para empilharmos nossas tabelas geradas em cada página. Para percorrermos o loop, utilizaremos o vetor *$link* dentro do *data_frame* "dados_tabela" e passarmos por todos nossos links. Os elementos que extraíremos de cada página já estão estabelecidos acima, então não sofrem alterações. Por fim, geramos um *data_frame* provisório com a tabela das 6 variáveis em cada página e vamos empilhá-las em nosso *data_frame* principal, o "dados_dou". 
 
 ```{r}
+dados_tabela <- dados_tabela %>% 
+  distinct(titulo, link, .keep_all = T)
+
 dados_dou <- data.frame()
 
 for (i in unique(dados_tabela$link)) {

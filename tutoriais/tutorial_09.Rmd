@@ -1,0 +1,198 @@
+---
+title: "Tutorial 9: Capturando as publicações do DOU, uma revisão"
+author: "Thiago Meireles"
+date: "`r format(Sys.time(), '%d/%m/%y')`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Abrindo o RSelenium e acessando a busca do DOU
+
+Como vimos no Tutorial 7, para acessar sites dinâmicos utilizaremos o *RSelenium*. Antes de abrir nosso navegador remoto, vamos carregar os pacotes que utilizaremos no Tutorial:
+
+```{r}
+pacman::p_load(RSelenium,
+               rvest,
+               stringr,
+               dplyr)
+```
+
+Após carregar nossos pacotes, abrimos uma chamada no *RSelenium* para criar um Driver remoto do Chrome com a função *rsDriver* e criamos um cliente para conseguirmos navegar pelas páginas que precisamos.
+
+```{r}
+rD <- rsDriver(browser = c("firefox"), port = 4567L, verbose=F, chromever = NULL)
+
+cliente <- rD$client
+```
+
+No Tutorial 7, se você ficou bastante atento, percebeu que a utilização do *url_base* com a substituição das referências de pesquisa (mudança de páginas) não teve um resultado satisfatório quando combinado com o *rvest*. Aqui veremos como "passar" de página dentro de uma busca em página dinâmica utilizanod o *RSelenium*. Vamos olhar para o objeto *url_base* do Tutorial 7 para revisar o que tínhamos por lá. 
+
+```{r}
+url_base <-  "https://www.in.gov.br/consulta/-/buscar/dou?q=nomeacao&s=todos&exactDate=personalizado&sortType=0&delta=20&currentPage=ATUAL&newPage=PROXIMA&score=0&id=518640624&displayDate=1698202800000&publishFrom=01%2F01%2F2023&publishTo=31%2F10%2F2023"
+```
+
+O que fizemos foi utilizar a função *gsub* para acessarmos as páginas de interesse, sendo a segunda página é a "currentPage" 1, iniciamos com "currentPage" igual a 0 e "newPage" igual a 1. No entanto, aqui vamos usar basicamente a primeira página de resultados para o ano corrente até 31 de outubro.
+
+```{r}
+url_pesquisa <- 'https://www.in.gov.br/consulta/-/buscar/dou?q=nomeacao&s=todos&exactDate=personalizado&sortType=0&delta=20&currentPage=0&newPage=1&score=0&id=518640624&displayDate=1698202800000&publishFrom=01%2F01%2F2023&publishTo=31%2F10%2F2023'
+```
+
+Vamos acessar nossa *url_pesquisa* utilizando a função  *$navigate* no objeto *cliente*. Com isso, a conexão com o Driver remoto do Chrome que estabelecemos para controlar remotamente utilizando o R.
+
+```{r}
+cliente$navigate(url_pesquisa)
+```
+
+O passo adicional é identificar o elemento clicável para mudar para a página seguinte com a função *findElement* e em seguida clicar nesse elemento com a função *clickElement*. A colinha com o *xpath* está abaixo, mas tente encontrar ele no código html. 
+
+```{r}
+botao_passa_pagina <- cliente$findElement(using = "xpath",
+                                          '//*[@id="rightArrow"]')
+botao_passa_pagina$clickElement()
+```
+
+Dica: para extrair os xpaths, utilize seu Google Chrome e não nossa versão remota. Aqui ele não indica "automaticamente" onde estão os nós que queremos quando inspecionamos os objetos.
+
+## Revisando a captura dos títulos e links das publicações do DOU
+
+No Tutorial 7 fizemos a captura dos títulos e links das publicações do DOU alterando os parâmetros da URL obtida nos resultados da busca. Aqui, no entanto, vamos alterar **apenas** a etapa de passagem de uma página para a outra utilizando o elemento de mudança de página e clicando nele na sequência. Só adicionaremos uma *pausa* entre mudar de página e capturar a informação para reduzir a chance do site identificar que somos um robô. Primeiros vamos testar três funções básicas do R que não utilizamos aqui. A primeira é *seq*, em que pedimos para que gere uma sequência de números entre dois valores com intervalo determinado. No exemplo, uma sequência de 4 a 6 com intervalo de 0,2. Uma segunda função é *sample* que extrai uma amostra aleatória com ou sem repetição (nós definimosa esta opção), mas aqui só utilizaremos um dos números da sequência gerada. E, por fim, *Sys.sleep* que gera a pausa a partir do tempo indicado em segundos. Vamos ver passo a passo:
+
+```{r}
+intervalo <- seq(4, 6, 0.2)
+
+intervalo_pausa <- sample(x = intervalo, size = 1)
+
+Sys.sleep(intervalo_pausa)
+```
+
+Vimos que o objeto "intervalo" tem todos os valores possíveis entre 4 e 6 com intervalos de 0,2. No objeto "intervalo_pausa" sorteamos um dos números gerados (e não utilizamos a opção replace porque não há múltiplos sorteios para definir a reposição ou não). Por fim, o tempo de intervalo sorteado foi aplicado na função *Sys.sleep* que manteve o R "ocupado" pelo tempo definido. E se tentarmos fazer tudo isso em apenas um comando?
+
+```{r}
+Sys.sleep(sample(x = seq(4, 6, 0.2), 1))
+```
+
+Sem objetos intermediários, podemos utilizar isso no nosso loop para passagem de páginas.
+
+Agora vendo como "enganar" que não somos um robô, vamos pegar o conteúdo das 20 primeiras páginas de resultados aplicando somente essas diferenças: passagem de página clicada e intervalo entre mudança de página:
+
+```{r}
+# Abrir primeira página de resultados
+cliente$navigate(url_pesquisa)
+
+# Ler a primeira página
+pagina <- read_html(cliente$getPageSource()[[1]])
+
+# Coletar as informações da primeira página
+dados_tabela <- tibble(
+  # Seção
+  secao = pagina %>% 
+    html_nodes(xpath = "//*[@class='resultado']//p[1]") %>% 
+    html_text(),
+  # Título
+  titulo = pagina %>% 
+    html_nodes(xpath = "//*[@class='title-marker']//a") %>% 
+    html_text(),
+  # Link
+  link = pagina %>% 
+    html_nodes(xpath = "//*[@class='title-marker']//a") %>% 
+    html_attr(name = "href")
+)
+
+# Repetir para as páginas de 2 a 20
+
+for (i in 2:20) {
+ 
+  print(i)
+  
+  passa_pagina <- cliente$findElement("xpath", '//*[@id="rightArrow"]')
+  passa_pagina$clickElement()
+  
+  Sys.sleep(sample(x = seq(4, 6, 0.2), 1))
+  
+  pagina <- read_html(cliente$getPageSource()[[1]])
+  
+  secao <- pagina %>% 
+    html_nodes(xpath = "//*[@class='resultado']//p[1]") %>% 
+    html_text()
+  
+  titulo <-  pagina %>% 
+    html_nodes(xpath = "//*[@class='title-marker']//a") %>% 
+    html_text()
+  
+  link <-  pagina %>% 
+    html_nodes(xpath = "//*[@class='title-marker']//a") %>% 
+    html_attr(name = "href")
+  
+  tabela <- tibble(titulo, link, secao)
+  
+  dados_tabela <- rbind(dados_tabela, tabela)
+  
+}
+
+```
+
+A limitação que encontramos quando utilizamos o loop para passar de página com o *gsub* não apareceu aqui, conseguimos os 400 resultados das 20 páginas sem as repetições que observamos no Tutorial 7. Vamos utilizar a função *distinct* do *dplyr* para checarmos se não tivemos realmente nenhuma repetição. Ela é como a *unique*, porém podemos aplicar para um *tibble* dentro de uma *pipeline* para filtrar por ocorrências distintas em uma variável ou combinações distintas. Caso não utilizemos todas as variáveis e queiramos manter todas as variáveis é necessário indicar com um *.keee.all = TRUE*:
+
+```{r}
+dados_tabela <- dados_tabela %>%
+  distinct(link, .keep_all = TRUE)
+```
+
+
+Agora é só realizarmos o loop pelas páginas para obter seu conteúdo, repetindo o processo realizado por lá. Como encerramos os processos em páginas dinâmicas, vamos encerrar o nosso navegador remoto.
+
+```{r}
+cliente$close()
+rD$server$stop()
+```
+
+## Capturando o texto de uma publicação do DOU
+
+Aqui apenas aplicaremos o loop final do Tutorial 7 para capturar todo o conteúdo das 400 publicações que obtivemos o link e ver o resultado como teste.
+
+```{r}
+dados_dou <- data.frame()
+
+for (i in unique(dados_tabela$link)) {
+  
+  url_pesquisa <- paste("https://www.in.gov.br", i, sep = "")
+  
+  print(which(dados_tabela$link==i))
+  
+  pagina <- read_html(url_pesquisa)
+  
+  data <- pagina %>% 
+    html_nodes(xpath = "//*[@class='detalhes-dou']//p[1]/span[2]") %>% 
+    html_text()
+  
+  edicao <- pagina %>% 
+    html_nodes(xpath = "//*[@class='detalhes-dou']//p[1]/span[5]") %>% 
+    html_text()
+  
+  secao_pagina <- pagina %>% 
+    html_nodes(xpath = "//*[@class='detalhes-dou']/p[1]/span[7]") %>% 
+    html_text() %>% 
+    str_squish() 
+  
+  titulo <- pagina %>% 
+    html_nodes(xpath = '//*[@class="texto-dou"]/p[@class="identifica"]') %>% 
+    html_text() %>% 
+    paste(., collapse = ' ') %>% 
+    str_squish()
+  
+  texto <- pagina %>% 
+    html_nodes(xpath = '//*[@class="texto-dou"]/p[@class="dou-paragraph"]') %>% 
+    html_text() %>% 
+    paste(., collapse = ' ') %>% 
+    str_squish() 
+  
+  tabela <- data.frame(titulo, data, edicao, secao_pagina, texto, url_pesquisa)
+  
+  dados_dou <- rbind(dados_dou, tabela)
+  
+}
+```
+
